@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Web App</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <h1>One Word</h1>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Enter word to search...">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul id="wordList">
+        {% for word in words %}
+        <li><a href="/word/{{ word.word }}">{{ word.word }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add Word</h2>
+    <form id="addForm">
+        <input type="text" id="addWordInput" placeholder="Enter new word...">
+        <input type="text" id="addDefinitionInput" placeholder="Enter definition...">
+        <button type="submit">Add Word</button>
+    </form>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+}
+
+#searchForm,
+#addForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+#searchInput,
+#addWordInput,
+#addDefinitionInput {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+
+    #searchForm,
+    #addForm {
+        flex-direction: column;
+    }
+
+    #searchInput,
+    #addWordInput,
+    #addDefinitionInput {
+        width: 100%;
+    }
+}
+
+/* Word list styles */
+#wordList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#wordList li {
+    margin-bottom: 5px;
+}
+
+#wordList li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Word definition page styles */
+#wordDefinition {
+    margin-top: 20px;
+}
+
+/* File upload styles */
+#fileUpload {
+    margin-top: 20px;
+}
+
+#fileUpload input[type="file"] {
+    display: none;
+}
+
+#fileUpload label {
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive styles for iPad landscape mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    #searchForm,
+    #addForm {
+        flex-direction: row;
+    }
+
+    #searchInput,
+    #addWordInput,
+    #addDefinitionInput {
+        width: 200px;
+    }
+}
