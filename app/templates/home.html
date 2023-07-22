@@ -12,7 +12,7 @@
     <div class="container">
         <div class="navbar">
             <h1 class="title1">One Word</h1>
-            <h1 class="title2"><a href="/add_word.html"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FEE34A/add--v1.png" alt="add--v1"/></a></h2> 
+            <h1 class="title2"><a href="/add.html"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FEE34A/add--v1.png" alt="add--v1"/></a></h2> 
         </div>
     
         <div class="search_area">
@@ -24,7 +24,14 @@
         <div class="content">
             <ul id="wordList">
                 {% for word in words %}
-                <li><a href="/word/{{ word.word }}">{{ word.word }}</a></li>
+                <li>
+                    <h2>
+                    <a href="/word/{{ word.word }}">{{ word.word }}</a>
+                    </h2>
+                    <p>
+                        {{ word.definition }}
+                    </p>
+                </li>
                 {% endfor %}
             </ul>
         </div>

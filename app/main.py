@@ -50,6 +50,11 @@ def word_definition(request: Request, word: str):
         raise HTTPException(status_code=404, detail="Word not found.")
     return templates.TemplateResponse("word.html", {"request": request, "word_entry": word_entry})
 
+# Page for adding a word
+@app.get("/add", response_class=HTMLResponse)
+def add_word_page(request: Request):
+    return templates.TemplateResponse("add.html", {"request": request})
+
 # Add a word and its definition
 @app.post("/add/")
 def add_word(word: str = Form(...), definition: str = Form(...)):
