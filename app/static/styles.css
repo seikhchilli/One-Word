@@ -1,25 +1,157 @@
 /* General styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:ital,wght@1,500&family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color:#ffffff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h1,
-h2 {
-    margin-bottom: 20px;
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    /* background-image: linear-gradient(rgba(211, 216, 240, 0.9),rgba(161, 162, 170, 0.9)),; */
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#searchForm,
+.navbar{
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    max-width: 800px;
+    overflow: hidden;
+    /* background-color: #ffffff; */
+    /* border-radius: 20px; */
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.navbar h1{
+    display: block;
+    color: #14274F;
+    text-align: center;
+    padding: 14px 14px 8px 14px;
+    text-decoration: none;
+    
+}
+
+.title1 {
+    float: left;
+    /* margin: 15px; */
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.title2 {
+    float:right;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+
+.search_area{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.search-bar{
+    width:100%;
+    max-width: 800px;
+    background-color: rgba(137, 9, 9, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 1px 15px;
+    /* backdrop-filter: blur(4px) saturate(180%); */
+}
+
+.search-bar input{
+     background: transparent;
+     flex: 1;
+     border: 0;
+     outline: none;
+     padding: 15px 15px;
+     font-size: 20px;
+     color: #cac7ff;
+     
+}
+::placeholder{
+    color: #14274F;
+}
+
+.search-bar button img{
+    width: 25px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background: #14274F;
+    cursor: pointer;
+}
+
+.content{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content li{
+    color: white;
+    width:100%;
+    max-width: 600px;
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+    margin: 5px;
+}
+
+
+.content li a{
+    text-decoration: none;
+    color: white;
+}
+.content li img{
+    float: right;
+    color: white;
+}
+
+/* #searchForm,
 #addForm {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
-}
+} */
 
-#searchInput,
+/* #searchInput,
 #addWordInput,
 #addDefinitionInput {
     margin-bottom: 10px;
@@ -28,10 +160,10 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 20px;
     cursor: pointer;
-}
+} */
 
 /* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 475px) {
 
     #searchForm,
     #addForm {
@@ -46,7 +178,7 @@ h2 {
 }
 
 /* Word list styles */
-#wordList {
+/* #wordList {
     list-style-type: none;
     padding: 0;
 }
@@ -54,11 +186,11 @@ h2 {
 #wordList li {
     margin-bottom: 5px;
 }
-
 #wordList li a {
     text-decoration: none;
     color: #333;
-}
+} */
+
 
 /* Word definition page styles */
 #wordDefinition {
@@ -87,7 +219,7 @@ h2 {
 
     #searchForm,
     #addForm {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     #searchInput,
