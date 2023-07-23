@@ -51,7 +51,7 @@ def word_definition(request: Request, word: str):
     return templates.TemplateResponse("word.html", {"request": request, "word_entry": word_entry})
 
 # Page for adding a word
-@app.get("/add", response_class=HTMLResponse)
+@app.get("/add/", response_class=HTMLResponse)
 def add_word_page(request: Request):
     return templates.TemplateResponse("add.html", {"request": request})
 
