@@ -9,15 +9,27 @@
 </head>
 
 <body>
-    <h2>Add Word</h2>
-    <form id="addForm">
-        <input type="text" id="addWordInput" placeholder="Enter new word...">
-        <input type="text" id="addDefinitionInput" placeholder="Enter definition...">
-        <button type="submit">Add Word</button>
-    </form>
-    <!-- Add file upload functionality here -->
-    <a href="/">Back to Home</a>
-    <script src="/static/script.js"></script>
+    <div class="container">
+        <div class="nav_area">
+            <div class="navbar">
+                <h1 class="title2"><img onclick="history.back()" width="50" height="50" src="/static/images/back.png" alt="add--v1"/></a></h2>  
+            </div>
+        </div>
+        <div class="form_area">
+            <form id="addForm" class="add_form">
+                <label for="addWordInput">Word</label>
+                <input type="text" class = "input_box", id="addWordInput" placeholder="Enter new word...">
+                <label for="addDefinitionInput">Define</label>
+                <textarea class = "input_box" id="addDefinitionInput" placeholder="Enter definition..."></textarea>
+                <button type="submit">Add Word</button>
+            </form>
+        </div>
+
+        <!-- Add file upload functionality here -->
+        
+    </div>
+
+    <script src="/static/add_script.js"></script>
 </body>
 
 </html>

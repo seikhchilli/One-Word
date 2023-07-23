@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -82,12 +82,14 @@ body {
 
 .search-bar{
     width:100%;
-    background-color: rgba(137, 9, 9, 0.2);
+    background-color: rgba(119, 188, 244, 0.2);
     display: flex;
     align-items: center;
     border-radius: 60px;
-    padding: 2px 4px;
+    padding-right: 6px;
     padding-left: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
     justify-content: space-between;
     flex-direction: row;
     /* backdrop-filter: blur(4px) saturate(180%); */
@@ -99,14 +101,13 @@ body {
      border: 0;
      outline: none;
      font-size: 2vh;
-     padding-left: 2vh;
-     padding-top: 2vh;
-     padding-bottom: 2vh;
-     color: #cac7ff;
+     padding: 2vh;
+     color: rgb(22, 35, 100);
+     font-family: 'Be Vietnam Pro', sans-serif;
      
 }
 ::placeholder{
-    color: #14274F;
+    color: #2e5ab9;
 }
 
 .search-bar button img{
@@ -143,6 +144,8 @@ body {
     border-bottom-width: 1px;
     border-bottom-color: lightgray;
     border-bottom-style:inset;
+    height: 80px;
+    overflow: hidden;
 }
 
 .content li h3{
@@ -158,52 +161,20 @@ body {
     padding-top: 2px;
     color: #3A3B3C;
     font-size: 15px;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-.content li img{
-    float: right;
-    color: #14274F;
-}
 
-/* #searchForm,
-#addForm {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-} */
-
-/* #searchInput,
-#addWordInput,
-#addDefinitionInput {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-} */
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 475px) {
     .container {
         padding: 0.5%;
+        padding-right: 2%;
+        padding-left: 1.5%;
     }
 }
 
-/* Word list styles */
-/* #wordList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#wordList li {
-    margin-bottom: 5px;
-}
-#wordList li a {
-    text-decoration: none;
-    color: #333;
-} */
 
 
 /* Word definition page styles */
@@ -244,3 +215,34 @@ body {
         width: 200px;
     }
 } */
+
+.add_form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.add_form label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2.2vh;
+}
+
+.input_box{
+    margin-bottom: 10px;
+    border-radius: 9px;
+    border: 0;
+    background-color: rgba(119, 188, 244, 0.2);
+    padding: 8px;
+    font-size: 1.8vh;
+    outline: 0;
+    color: rgb(22, 35, 100);
+}
+
+#addDefinitionInput {
+    height: 18vh;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.add_form button{
+    margin-top: 10px;
+}
