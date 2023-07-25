@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Word - Dictionary Web App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav_area">
+            <div class="navbar">
+                <h1 class="title2"><img onclick="history.back()" width="50" height="50" src="/static/images/back.png" alt="add--v1"/></a></h2>  
+            </div>
+        </div>
+        <div class="form_area">
+            <form id="addForm" class="add_form">
+                <label for="addWordInput">Word</label>
+                <input type="text" class = "input_box", id="addWordInput" placeholder="Enter new word...">
+                <label for="addDefinitionInput">Define</label>
+                <textarea class = "input_box" id="addDefinitionInput" placeholder="Enter definition..."></textarea>
+                <button type="submit">Add Word</button>
+            </form>
+        </div>
+
+        <!-- Add file upload functionality here -->
+        
+    </div>
+
+    <script src="/static/add_script.js"></script>
+</body>
+
+</html>

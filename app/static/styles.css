@@ -1,64 +1,181 @@
 /* General styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:ital,wght@1,500&family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color:#ffffff;
+    font-family: 'Open Sans', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-h1,
-h2 {
-    margin-bottom: 20px;
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 2% 10% 2% 10%;
+    /* background-image: linear-gradient(rgba(211, 216, 240, 0.9),rgba(161, 162, 170, 0.9)),; */
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#searchForm,
-#addForm {
+.nav_area{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-
+    justify-content: center;
 }
 
-#searchInput,
-#addWordInput,
-#addDefinitionInput {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
+.navbar{
+    display: flex;
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: #ffffff; */
+    /* border-radius: 20px; */
+    flex-direction: row;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.navbar h1{
+    display: block;
+    color: #14274F;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 4px;
+    text-decoration: none;
+    
+}
+
+/* .title1 {
+    float: left;
+     margin: 15px; 
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.title2 {
+    float:right;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    
+} */
+
+
+
+.search_area{
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
 }
+
+.search-bar{
+    width:100%;
+    background-color: rgba(119, 188, 244, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding-right: 6px;
+    padding-left: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    justify-content: space-between;
+    flex-direction: row;
+    /* backdrop-filter: blur(4px) saturate(180%); */
+}
+
+.search-bar input{
+     background: transparent;
+     flex: 1;
+     border: 0;
+     outline: none;
+     font-size: 2vh;
+     padding: 2vh;
+     color: rgb(22, 35, 100);
+     font-family: 'Be Vietnam Pro', sans-serif;
+     
+}
+::placeholder{
+    color: #2e5ab9;
+}
+
+.search-bar button img{
+    width: 25px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background: #14274F;
+    cursor: pointer;
+    
+}
+
+.content_heading_area{
+    margin-top: 8px;
+    padding: 8px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content li{
+    color: #14274F;
+    width:100%;
+    display: flex;
+    margin: 8px;
+    padding-bottom: 13px;
+    flex-direction: column;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    border-bottom-style:inset;
+    height: 80px;
+    overflow: hidden;
+}
+
+.content li h3{
+    margin-bottom: 3px;
+}
+
+.content li a{
+    text-decoration: none;
+    color: #14274F;
+}
+
+.content li p{
+    padding-top: 2px;
+    color: #3A3B3C;
+    font-size: 15px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
 
 /* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-
-    #searchForm,
-    #addForm {
-        flex-direction: column;
-    }
-
-    #searchInput,
-    #addWordInput,
-    #addDefinitionInput {
-        width: 100%;
+@media screen and (max-width: 475px) {
+    .container {
+        padding: 0.5%;
+        padding-right: 2%;
+        padding-left: 1.5%;
     }
 }
 
-/* Word list styles */
-#wordList {
-    list-style-type: none;
-    padding: 0;
-}
 
-#wordList li {
-    margin-bottom: 5px;
-}
-
-#wordList li a {
-    text-decoration: none;
-    color: #333;
-}
 
 /* Word definition page styles */
 #wordDefinition {
@@ -83,11 +200,13 @@ h2 {
 }
 
 /* Responsive styles for iPad landscape mode */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
+/* @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        padding: 0;
+    }
     #searchForm,
     #addForm {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     #searchInput,
@@ -95,4 +214,35 @@ h2 {
     #addDefinitionInput {
         width: 200px;
     }
+} */
+
+.add_form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.add_form label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2.2vh;
+}
+
+.input_box{
+    margin-bottom: 10px;
+    border-radius: 9px;
+    border: 0;
+    background-color: rgba(119, 188, 244, 0.2);
+    padding: 8px;
+    font-size: 1.8vh;
+    outline: 0;
+    color: rgb(22, 35, 100);
+}
+
+#addDefinitionInput {
+    height: 18vh;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.add_form button{
+    margin-top: 10px;
 }
